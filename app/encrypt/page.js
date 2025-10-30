@@ -78,7 +78,7 @@ export default function EncryptPage() {
 
     // Title
     const title = "Scan QR Code to Decrypt Message";
-    doc.setFontSize(16);
+    doc.setFontSize(36);
     doc.text(title, (pageWidth - doc.getTextWidth(title)) / 2, 40);
 
     // QR Code Image
@@ -90,7 +90,7 @@ export default function EncryptPage() {
     // Passcode (conditionally)
     if (includePasscode) {
       const passcodeText = `Passcode: ${passcode}`;
-      doc.setFontSize(12);
+      doc.setFontSize(18);
       doc.text(passcodeText, (pageWidth - doc.getTextWidth(passcodeText)) / 2, 240);
     }
 
