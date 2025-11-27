@@ -13,7 +13,7 @@ export async function generateEncryptedQR(message, passcode) {
 
   // Build a URL with the encrypted payload as a query parameter
   const baseUrl = process.env.NEXT_PUBLIC_URL; // e.g., https://yourdomain.com
-  const decryptUrl = `https://${baseUrl}/decrypt?payload=${encodeURIComponent(encrypted)}`;
+  const decryptUrl = `${baseUrl}/decrypt?payload=${encodeURIComponent(encrypted)}`;
 
   // Generate the QR from the URL
   const qr = await QRCode.toDataURL(decryptUrl, {
